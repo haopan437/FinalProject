@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -16,5 +19,9 @@
     "mongodb": "^3.3.2",
     "morgan": "~1.9.1",
     "multiparty": "^4.2.1"
+  },
+  "engines": {
+    "node": "16.15.1",
+    "npm": "8.11.0"
   }
 }
