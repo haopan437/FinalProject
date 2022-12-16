@@ -18,13 +18,12 @@ a {
   margin-right: 20px;
 }
 
-/* 登录与注册 样式 */
 .form-box {
   width: 300px;
   margin: 0 auto;
   margin-top: 50px;
 }
-.form-box form>input {
+.form-box form > input {
   border: none;
   outline: none;
   display: block;
@@ -36,28 +35,28 @@ a {
   border: 1px #d9d9d9 solid;
   border-radius: 5px;
   font-size: 14px;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   margin-bottom: 20px;
   overflow: hidden;
   box-sizing: border-box;
 }
-.form-box form>input[type='text'], .form-box form>input[type='password'] {
+.form-box form > input[type="text"],
+.form-box form > input[type="password"] {
   padding: 0 10px;
 }
-.form-box form>input[type='submit'] {
+.form-box form > input[type="submit"] {
   font-size: 16px;
   border: 0;
   background-color: #03a9f4;
   color: #fff;
   cursor: pointer;
 }
-.form-box>div {
+.form-box > div {
   text-align: center;
   line-height: 50px;
 }
 
-/* 顶部 Bar */
 .bar {
   height: 50px;
   width: 100%;
@@ -76,20 +75,23 @@ a {
 .bar a:hover {
   font-weight: bold;
 }
-.bar>span {
+.bar > span {
   animation: user 4s linear infinite;
   display: inline-block;
 }
 @keyframes user {
-  from {transform: rotate(0);}
-  to { transform: rotate(360deg);}
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .bar .home {
   float: left;
   height: 50px;
   width: 50px;
   overflow: hidden;
-  /* background: url(/images/home.png) no-repeat 40px 40px / 0 0; */
 }
 .bar .home img {
   display: block;
@@ -99,14 +101,11 @@ a {
   margin-left: -20px;
 }
 
-
-
-/* 文章列表 */
 .list {
   width: 80%;
   margin: 35px auto;
 }
-.list>div.row {
+.list > div.row {
   height: 50px;
   width: 100%;
   overflow: hidden;
@@ -115,65 +114,63 @@ a {
   cursor: pointer;
   font-size: 16px;
 }
-.list>div.row:hover {
-  background: rgba(245,245,245, 1);
+.list > div.row:hover {
+  background: rgba(245, 245, 245, 1);
 }
-.list>.row>span:nth-child(1) {
+.list > .row > span:nth-child(1) {
   display: inline-block;
   width: 10%;
   float: left;
 }
-.list>.row>span:nth-child(2) {
+.list > .row > span:nth-child(2) {
   display: inline-block;
   width: 10%;
   float: left;
 }
-.list>.row>span:nth-child(3) {
+.list > .row > span:nth-child(3) {
   display: inline-block;
   width: 30%;
   float: left;
 }
-.list>.row>span:nth-child(4) {
+.list > .row > span:nth-child(4) {
   display: inline-block;
   width: 30%;
   float: left;
 }
-.list>.row>span:nth-child(5) {
+.list > .row > span:nth-child(5) {
   display: inline-block;
   width: 20%;
   float: left;
   text-align: right;
 }
-.list>.row>span:nth-child(5) a {
+.list > .row > span:nth-child(5) a {
   display: inline-block;
   margin-left: 5px;
 }
-.list>.row>span:nth-child(5) a:hover {
+.list > .row > span:nth-child(5) a:hover {
   font-weight: bold;
 }
 
-.list>.pages {
+.list > .pages {
   text-align: right;
   line-height: 50px;
 }
-.list>.pages a {
+.list > .pages a {
   display: inline-block;
   padding: 0 3px;
   font-size: 16px;
   text-align: center;
 }
-.list>.pages a:hover {
+.list > .pages a:hover {
   font-weight: bold;
 }
 
-
-/* 写文章 */
 .article {
   width: 80%;
   margin: 35px auto;
   overflow: hidden;
 }
-.article input[type='text'] {
+.article input[type="text"] {
   display: block;
   width: 100%;
   height: 35px;
@@ -181,8 +178,8 @@ a {
   border: 1px #d9d9d9 solid;
   border-radius: 5px;
   font-size: 16px;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   box-sizing: border-box;
   padding: 0 10px;
   margin-bottom: 20px;
@@ -194,7 +191,7 @@ a {
   height: 350px;
   box-sizing: border-box;
 }
-.article input[type='submit'] {
+.article input[type="submit"] {
   margin-top: 20px;
   height: 35px;
   width: 80px;
@@ -205,12 +202,10 @@ a {
   cursor: pointer;
   border-radius: 5px;
 }
-.article input[type='submit']:hover {
+.article input[type="submit"]:hover {
   box-shadow: 0px 0px 5px #03a9f4;
 }
 
-
-/* 文章详情 */
 .detail {
   width: 80%;
   margin: 35px auto;
@@ -225,4 +220,3 @@ a {
   font-size: 20px;
   font-weight: bold;
 }
-

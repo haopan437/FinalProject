@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>Details Page</title>
+    <%- include head %>
+  </head>
+  <body>
+    <%- include('bar', {username: username}) %>
 
-  <title>Details Page</title>
-  <%- include head %>
-</head>
-<body>
-
-  <%- include('bar', {username: username}) %>
-
-  <div class="detail">
-    <div class="title"><%=item.title%></div>
-    <div class='desc'>
-      <span>Friends：<%=item.username%></span>
-      <span>Release time：<%=item.time%></span>
+    <div class="detail">
+      <div class="title"><%=item.title%></div>
+      <div class="desc">
+        <span>Friends:<%=item.username%></span>
+        <span>Release time:<%=item.time%></span>
+      </div>
+      <div class="content"><%-item.content%></div>
     </div>
-    <div class="content"><%-item.content%></div>
-  </div>
-
-</body>
+  </body>
 </html>
