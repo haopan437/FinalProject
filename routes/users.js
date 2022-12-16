@@ -9,6 +9,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.post("/regist", function (req, res, next) {
+  //validate the input
   const { isValid, errors } = validateRegisterInput(req.body);
 
   if (!isValid) {
@@ -19,6 +20,8 @@ router.post("/regist", function (req, res, next) {
     password: req.body.password,
     password2: req.body.password2,
   };
+
+  //insert the new user
   model.connect(function (db) {
     db.collection("users").insertOne(data, function (err, ret) {
       if (err) {
@@ -31,7 +34,9 @@ router.post("/regist", function (req, res, next) {
   });
 });
 
+//login
 router.post("/login", function (req, res, next) {
+  //validate the input
   const { isValid, errors } = validateLoginInput(req.body);
 
   if (!isValid) {
@@ -41,6 +46,8 @@ router.post("/login", function (req, res, next) {
     username: req.body.username,
     password: req.body.password,
   };
+
+  //query user from db
   model.connect(function (db) {
     db.collection("users")
       .find(data)
@@ -59,6 +66,7 @@ router.post("/login", function (req, res, next) {
   });
 });
 
+//logout and redirect to the login page
 router.get("/logout", function (req, res, next) {
   req.session.username = null;
   res.redirect("/login");

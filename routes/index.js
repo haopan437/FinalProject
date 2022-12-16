@@ -3,11 +3,10 @@ var router = express.Router();
 var model = require("../model");
 var moment = require("moment");
 
-/* GET home page. */
+//home page
 router.get("/", function (req, res, next) {
   var username = req.session.username || "";
   var page = req.query.page || 1;
-  console.log("home", page);
   var data = {
     total: 0, 
     curPage: page,

@@ -7,6 +7,7 @@ var fs = require("fs");
 router.post("/add", function (req, res, next) {
   var id = parseInt(req.body.id);
   if (id) {
+    //update the content
     var page = req.body.page;
     var title = req.body.title;
     var content = req.body.content;
@@ -30,6 +31,7 @@ router.post("/add", function (req, res, next) {
       );
     });
   } else {
+    //add the new content
     var data = {
       title: req.body.title,
       content: req.body.content,
@@ -49,6 +51,7 @@ router.post("/add", function (req, res, next) {
   }
 });
 
+//delete the content
 router.get("/delete", function (req, res, next) {
   var id = parseInt(req.query.id);
   var page = req.query.page;

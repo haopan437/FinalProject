@@ -15,14 +15,19 @@
         <input
           type="text"
           name="title"
-          placeholder="Enter Title"
+          placeholder="Topic"
           value="<%=item.title%>"
         />
-        <textarea name="content" class="xheditor"><%- item.content %></textarea>
+        <textarea
+          type="text"
+          name="content"
+          placeholder="What's happening?"
+          value="<%=item.content%>"
+        ><%- item.content %></textarea>
         <% if (item.id) { %>
-        <input type="submit" value="modify" />
+        <input type="submit" value="Modify" />
         <%} else {%>
-        <input type="submit" value="publish" />
+        <input type="submit" value="Tweet" />
         <%}%>
       </form>
     </div>
