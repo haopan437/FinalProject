@@ -294,3 +294,15 @@ a {
   margin-top: 10px;
   margin-left: -20px;
 }
+
+.front {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  line-height: 50px;
+  text-align: left;
+  color: #03a9f4;
+  box-sizing: border-box;
+  padding: 0 15px;
+  font-size: 16px;
+}
