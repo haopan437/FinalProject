@@ -232,3 +232,65 @@ a {
           flex: 2;
   width: 100%;
 }
+
+
+.userpage {
+  width: 80%;
+  margin: 35px auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px #d9d9d9 solid;
+  padding-bottom: 50px;
+}
+
+.bar {
+  height: 50px;
+  width: 100%;
+  background-color: #03a9f4;
+  line-height: 50px;
+  text-align: right;
+  color: white;
+  box-sizing: border-box;
+  padding: 0 15px;
+  font-size: 16px;
+}
+.user a {
+  padding-left: 15px;
+  color: #fff;
+}
+.user a:hover {
+  font-weight: bold;
+}
+.user > span {
+  display: inline-block;
+  margin-left:30px;
+  float:right
+}
+
+.user {
+  height: 50px;
+  width: 100%;
+  background-color: #03a9f4;
+  line-height: 50px;
+  text-align: right;
+  color: white;
+  box-sizing: border-box;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.user .home {
+  float: left;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+.user .home img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: -20px;
+}

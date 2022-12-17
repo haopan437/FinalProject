@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>User Page</title>
+      <%- include head %>
+  </head>
+
+
+  <body>
+  <div>
+
+    <div class="user">
+
+            <a href="/" class="home">
+                <img src="/images/home.png" alt="home">
+              </a>
+            <span>Myname:<%=data['username']%></span>
+            <span>Myemail:<%=data['email']%></span>
+            <span>Myrole:<%=data['role']%></span>
+    </div>
+
+    <div >
+      <% data['list'].map(function(item) { %>
+      <div class="userpage">
+            <div class="title"><%=item.title%></div>
+            <div class="content"><%=item.content%></div>
+            <div class="desc">
+              <span>User: <%=item.username%></span>
+              <span>Create time: <%=item.time%></span>
+            </div>
+          </div>
+      <% }) %>
+    </div>
+   </div>
+  </body>
+</html>
+

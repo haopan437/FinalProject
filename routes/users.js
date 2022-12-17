@@ -19,6 +19,8 @@ router.post("/regist", function (req, res, next) {
     username: req.body.username,
     password: req.body.password,
     password2: req.body.password2,
+    email: req.body.email,
+    role: req.body.role
   };
 
   //insert the new user
@@ -71,5 +73,7 @@ router.get("/logout", function (req, res, next) {
   req.session.username = null;
   res.redirect("/login");
 });
+
+
 
 module.exports = router;

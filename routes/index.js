@@ -89,4 +89,52 @@ router.get("/detail", function (req, res, next) {
   });
 });
 
+// 渲染详情页
+router.get('/userarticles', function(req, res,next) {
+  var username = req.session.username || ''
+  var data = {
+    list: [] ,  // 当前页的文章列表
+    username:"",
+    email:"",
+    role:"",
+  }
+
+  model.connect(function(db) {
+    db.collection('users').find({username: username}).toArray(function(err, docs2) {
+      if (err) {
+        console.log('查询失败', err)
+      } else {
+        console.log('users', docs2)
+        data.username = docs2[0]['username']
+        data.email = docs2[0]['email']
+        data.role = docs2[0]['role']
+        console.log('data', data)
+      }
+    })
+  })
+  if(data.username!==null){
+    model.connect(function(db) {
+
+      db.collection('articles').find({username:username}).toArray(function(err, docs) {
+        if (err) {
+          res.redirect('/')
+        }else {
+          if (docs.length === 0) {
+            res.redirect('/')
+          } else {
+            docs.map(function(ele, index) {
+              ele['time'] = moment(ele.id).format('YYYY-MM-DD HH:mm:ss')
+            })
+            console.log('data1',docs )
+            data.list = docs
+            console.log('data1', data)
+            res.render("userpage",  {data:data} );
+          }
+        }
+      })
+    })
+  }
+
+})
+
 module.exports = router;
