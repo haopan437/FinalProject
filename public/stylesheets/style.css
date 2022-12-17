@@ -80,7 +80,7 @@ a {
   font-weight: bold;
 }
 .bar > span {
-  animation: user 4s linear infinite;
+  /*animation: user 4s linear infinite;*/
   display: inline-block;
 }
 @keyframes user {
