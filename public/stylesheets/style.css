@@ -301,8 +301,9 @@ a {
   background-color: white;
   line-height: 50px;
   text-align: left;
+  maigin-left:50px;
   color: #03a9f4;
   box-sizing: border-box;
-  padding: 0 15px;
+  padding: 0 110px;
   font-size: 16px;
 }
