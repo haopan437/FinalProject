@@ -89,11 +89,10 @@ router.get("/detail", function (req, res, next) {
   });
 });
 
-// 渲染详情页
 router.get('/userarticles', function(req, res,next) {
   var username = req.session.username || ''
   var data = {
-    list: [] ,  // 当前页的文章列表
+    list: [] ,  
     username:"",
     email:"",
     role:"",
@@ -102,7 +101,7 @@ router.get('/userarticles', function(req, res,next) {
   model.connect(function(db) {
     db.collection('users').find({username: username}).toArray(function(err, docs2) {
       if (err) {
-        console.log('查询失败', err)
+        console.log('Query failed.', err)
       } else {
         console.log('users', docs2)
         data.username = docs2[0]['username']
